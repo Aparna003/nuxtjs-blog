@@ -37,12 +37,13 @@ export default {
   position: relative;
   padding: 30px;
   box-sizing: border-box;
+  background-image: url('~assets/images/main-page-background.jpg');
   background-position: center;
   background-size: cover;
 }
 
 .intro h1 {
-  position: absolute;
+  position:absolute;
   top: 10%;
   left: 5%;
   width: 90%;
@@ -51,7 +52,7 @@ export default {
   background-color: rgb(211, 211, 211);
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 3px 3px 3px black;
+  box-shadow: 3px 3px 3px rgb(53, 53, 92);
   box-sizing: border-box;
   border: 1px solid black;
 }
