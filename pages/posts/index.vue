@@ -1,9 +1,15 @@
 <template>
   <div class = "posts-pg">
-
+   <PostList />
   </div>
 </template>
 
+<script>
+import PostList from '@/components/Posts/PostList';
+export default {
+  components: { PostList }
+}
+</script>
 
 <style>
 .posts-pg {
@@ -11,4 +17,6 @@
   justify-content: center;
   align-items: center;
 }
+
+
 </style>
