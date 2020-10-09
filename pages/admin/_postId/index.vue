@@ -9,6 +9,7 @@
 <script>
 import AdminFormPost from '@/components/Admin/AdminFormPost'
 export default {
+  layout: 'admin',
   components : {
     AdminFormPost
   },
