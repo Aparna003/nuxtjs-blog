@@ -19,6 +19,7 @@ export default {
     PostList
    },
    asyncData(context, callback) {
+     console.log('asyncdata is executed')
          setTimeout(() => {
        callback(null, {
          loadedPosts :[
@@ -29,7 +30,7 @@ export default {
            id:'2', title: "My Web project", previewText: 'this is my preview of project',thumbnail:'https://wallpapercave.com/wp/wp4974478.jpg'
          },
          {
-           id:'3', title: "first post", previewText: 'this is my preview text',thumbnail:'https://wallpapercave.com/wp/wp4974475.jpg'
+           id:'3' , title: "first post", previewText: 'this is my preview text',thumbnail:'https://wallpapercave.com/wp/wp4974475.jpg'
          }
        ]
       });

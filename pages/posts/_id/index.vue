@@ -1,18 +1,39 @@
  <template>
    <div class="single-post-pg">
     <section class="post">
-      <h2 class="post-title"> Title of post </h2>
+      <h2 class="post-title">{{ loadedPost.title }}</h2>
         <div class="post-details">
-          <div class="post-detail" > Last updated on XXYY</div>
-          <div class="post-detail"> Wrriten by : XYZ</div>
+          <div class="post-detail" >{{ loadedPost.updatedDate }}</div>
+          <div class="post-detail"> {{ loadedPost.author }}</div>
         </div>
-        <p class="post-content">Content of post </p>
+        <p class="post-content">{{ loadedPost.content  }} </p>
     </section>
     <section class="post=feedback">
       <p> For more queries send a mail to <a href="mailto:feedback@blog.com">feedback@blog.com</a></p>
         </section>
     </div>
  </template>
+
+<script>
+export default {
+  asyncData(context,callback){
+    setTimeout(()=>{
+      callback(null,{
+        loadedPost: {
+           id:'1',
+           title: "first post    (id:"+context.route .params.id+")",
+           previewText: 'this is my preview text',
+           author: 'Aparna',
+           updatedDate :new Date(),
+           content: 'static  content used as dummy content',
+           thumbnail:'https://agnitogeek.com/wp-content/uploads/2020/03/download-16.png'
+
+        }
+      })
+    },1000)
+  }
+}
+</script>
 
 <style scoped>
 .single-post-pg {
