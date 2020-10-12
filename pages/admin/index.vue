@@ -8,18 +8,23 @@
      </section>
      <section class="existing-posts">
        <h1>Existing Posts </h1>
-       <PostList isAdmin />
+       <PostList :posts="loadedPosts" isAdmin />
      </section>
   </div>
 </template>
 <script>
 import PostList from '@/components/Posts/PostList'
 export default {
-  layout: 'admin', 
+  layout: 'admin',
   components :{ PostList },
   data:()=> ({
         active: 0
-      })
+      }),
+  computed:{
+    loadedPosts(){
+       return this.$store.getters.loadedPosts
+     }
+  }
 }
 </script>
 
