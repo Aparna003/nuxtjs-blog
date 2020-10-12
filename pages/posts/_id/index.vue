@@ -10,24 +10,23 @@
     </section>
     <section class="post=feedback">
       <p> For more queries send a mail to <a href="mailto:feedback@blog.com">feedback@blog.com</a></p>
-        </section>
+     </section>
     </div>
  </template>
 
 <script>
 export default {
   asyncData(context,callback){
-    setTimeout(()=>{
-      callback(null,{
-        loadedPost: {
+    setTimeout(() => {
+         callback(null,{
+        loadedPost : {
            id:'1',
-           title: "first post    (id:"+context.route .params.id+")",
+           title: "first post  (id:"+context.route.params.id+")",
            previewText: 'this is my preview text',
            author: 'Aparna',
            updatedDate :new Date(),
            content: 'static  content used as dummy content',
            thumbnail:'https://agnitogeek.com/wp-content/uploads/2020/03/download-16.png'
-
         }
       })
     },1000)

@@ -10,16 +10,14 @@
 </template>
 
 <script>
-import PostPreview from "@/components/Posts/PostPreview"
+
 import PostList from "@/components/Posts/PostList"
 
 export default {
   components: {
-    PostPreview,
     PostList
    },
    asyncData(context, callback) {
-     console.log('asyncdata is executed')
          setTimeout(() => {
        callback(null, {
          loadedPosts :[
